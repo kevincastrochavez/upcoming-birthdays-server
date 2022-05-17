@@ -3,36 +3,44 @@
     "firstName": "Kevin",
     "lastName": "Castro",
     "birthdayDate": "March 23",
-    "giftIdea": "Money"
+    "giftIdea": "Money",
+    "favoriteSnack": "Chips",
+    "throwParty": false,
+    "spotlight": false,
+    "descriptionOfDreamDay": "This would be a description of a dream day",
+    "avatarPicture": "picture.jpg"
   },
   {
     "firstName": "Kevin",
     "lastName": "Castro",
     "birthdayDate": "March 23",
-    "giftIdea": "Money"
+    "giftIdea": "Money",
+    "favoriteSnack": "Chips",
+    "throwParty": false,
+    "spotlight": false,
+    "descriptionOfDreamDay": "This would be a description of a dream day",
+    "avatarPicture": "picture.jpg"
   },
   {
     "firstName": "Kevin",
     "lastName": "Castro",
     "birthdayDate": "March 23",
-    "giftIdea": "Money"
+    "giftIdea": "Money",
+    "favoriteSnack": "Chips",
+    "throwParty": false,
+    "spotlight": false,
+    "descriptionOfDreamDay": "This would be a description of a dream day",
+    "avatarPicture": "picture.jpg"
   },
   {
     "firstName": "Kevin",
     "lastName": "Castro",
     "birthdayDate": "March 23",
-    "giftIdea": "Money"
-  },
-  {
-    "firstName": "Kevin",
-    "lastName": "Castro",
-    "birthdayDate": "March 23",
-    "giftIdea": "Money"
-  },
-  {
-    "firstName": "Kevin",
-    "lastName": "Castro",
-    "birthdayDate": "March 23",
-    "giftIdea": "Money"
+    "giftIdea": "Money",
+    "favoriteSnack": "Chips",
+    "throwParty": false,
+    "spotlight": false,
+    "descriptionOfDreamDay": "This would be a description of a dream day",
+    "avatarPicture": "picture.jpg"
   }
 ]
