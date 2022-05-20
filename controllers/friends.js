@@ -1,4 +1,5 @@
 const mongodb = require('../db/connect');
+const ObjectId = require('mongodb').ObjectId;
 
 const getAllFriends = async (req, res) => {
   try {
@@ -13,6 +14,59 @@ const getAllFriends = async (req, res) => {
   }
 };
 
+const getFriend = async (req, res) => {
+  try {
+    const urlId = new ObjectId(req.params.id);
+
+    const result = await mongodb
+      .getDb()
+      .db()
+      .collection('friends')
+      .find({ _id: urlId });
+
+    result.toArray().then((lists) => {
+      res.setHeader('Content-Type', 'application/json');
+      res.status(200).json(lists[0]);
+    });
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};
+
+const createFriend = async (req, res) => {
+  try {
+    const friend = {
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      birthdayDate: req.body.birthdayDate,
+      giftIdea: req.body.giftIdea,
+      favoriteSnack: req.body.favoriteSnack,
+      throwParty: req.body.throwParty,
+      spotlight: req.body.spotlight,
+      descriptionOfDreamDay: req.body.descriptionOfDreamDay,
+      avatarPicture: req.body.avatarPicture,
+    };
+
+    const response = await mongodb
+      .getDb()
+      .db()
+      .collection('friends')
+      .insertOne(friend);
+
+    if (response.acknowledged) {
+      res.status(201).json(response);
+    } else {
+      res
+        .status(500)
+        .json(`An error occurred creating a friend: ${response.error}`);
+    }
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};
+
 module.exports = {
   getAllFriends,
+  getFriend,
+  createFriend,
 };

@@ -1,7 +1,9 @@
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+const swaggerUi = require('swagger-ui-express');
 
+const swaggerDocument = require('./swagger-output.json');
 const friendsRoutes = require('./routes/friends');
 const mongodb = require('./db/connect');
 
@@ -17,6 +19,7 @@ app
 
     next();
   })
+  .use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
   .use('/friends', friendsRoutes);
 
 mongodb.initDb((err) => {

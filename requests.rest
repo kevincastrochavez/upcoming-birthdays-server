@@ -1,3 +1,20 @@
 # localhost
 
 GET http://localhost:8080/friends
+###
+GET http://localhost:8080/friends/6287e7be2e19d620aff1fbc7
+###
+POST http://localhost:8080/friends HTTP/1.1 
+content-type: application/json
+
+{
+    "firstName": "Citlalli",
+    "lastName": "Gonzalez",
+    "birthdayDate": "January 31",
+    "giftIdea": "Ring",
+    "favoriteSnack": "Chips",
+    "throwParty": true,
+    "spotlight": true,
+    "descriptionOfDreamDay": "This would be a description of a dream day",
+    "avatarPicture": "picture.jpg"
+    }
