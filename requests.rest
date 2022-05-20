@@ -1,4 +1,6 @@
-# localhost
+############################
+### LOCALHOST ###
+############################
 
 GET http://localhost:8080/friends
 ###
@@ -8,7 +10,31 @@ POST http://localhost:8080/friends HTTP/1.1
 content-type: application/json
 
 {
-    "firstName": "Citlalli",
+    "firstName": "Jose",
+    "lastName": "Gonzalez",
+    "birthdayDate": "January 31",
+    "giftIdea": "Ring",
+    "favoriteSnack": "Chips",
+    "throwParty": true,
+    "spotlight": true,
+    "descriptionOfDreamDay": "This would be a description of a dream day",
+    "avatarPicture": "picture.jpg"
+    }
+
+
+############################
+### PRODUCTION ###
+############################
+
+GET https://upcoming-birthdays.herokuapp.com/friends
+###
+GET https://upcoming-birthdays.herokuapp.com/friends/6287e7be2e19d620aff1fbc7
+###
+POST https://upcoming-birthdays.herokuapp.com/friends/ HTTP/1.1 
+content-type: application/json
+
+{
+    "firstName": "Juan",
     "lastName": "Gonzalez",
     "birthdayDate": "January 31",
     "giftIdea": "Ring",
