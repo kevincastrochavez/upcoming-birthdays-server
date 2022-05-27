@@ -11,7 +11,7 @@ content-type: application/json
 
 {
     "firstName": "Jose",
-    "lastName": "Gonzalez",
+    "lastName": "Maria",
     "birthdayDate": "January 31",
     "giftIdea": "Ring",
     "favoriteSnack": "Chips",
@@ -20,6 +20,9 @@ content-type: application/json
     "descriptionOfDreamDay": "This would be a description of a dream day",
     "avatarPicture": "picture.jpg"
     }
+###
+DELETE http://localhost:8080/friends/62904fb38c0d951bcc2684b4 HTTP/1.1
+
 
 
 ############################
@@ -44,3 +47,5 @@ content-type: application/json
     "descriptionOfDreamDay": "This would be a description of a dream day",
     "avatarPicture": "picture.jpg"
     }
+###
+DELETE https://upcoming-birthdays.herokuapp.com/friends/628800457ae3bf7382b97537 HTTP/1.1
