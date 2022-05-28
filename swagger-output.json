@@ -5,7 +5,7 @@
     "description": "This is an API to store friends birthday's information like birthdate, gift idea, favorite snack, etc",
     "version": "1.0.0"
   },
-  "host": "https://upcoming-birthdays.herokuapp.com/friends",
+  "host": "upcoming-birthdays.herokuapp.com/friends",
   "basePath": "/",
   "schemes": [
     "https"
