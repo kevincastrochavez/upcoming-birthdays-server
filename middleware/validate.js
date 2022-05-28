@@ -17,7 +17,7 @@ const saveFriend = (req, res, next) => {
     if (!status) {
       res.status(412).send({
         success: false,
-        message: 'Problem creating a new friend',
+        message: 'Problem creating or updating a new friend',
         data: err,
       });
     } else {

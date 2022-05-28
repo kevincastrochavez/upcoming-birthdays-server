@@ -16,6 +16,10 @@ const getAllFriends = async (req, res) => {
 
 const getFriend = async (req, res) => {
   try {
+    if (!ObjectId.isValid(req.params.id)) {
+      res.status(400).json('Must use a valid friend id to find a friend');
+    }
+
     const urlId = new ObjectId(req.params.id);
 
     const result = await mongodb
@@ -65,6 +69,44 @@ const createFriend = async (req, res) => {
   }
 };
 
+const updateFriend = async (req, res) => {
+  try {
+    if (!ObjectId.isValid(req.params.id)) {
+      res.status(400).json('Must use a valid friend id to update a friend.');
+    }
+
+    const friendId = new ObjectId(req.params.id);
+
+    const friend = {
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      birthdayDate: req.body.birthdayDate,
+      giftIdea: req.body.giftIdea,
+      favoriteSnack: req.body.favoriteSnack,
+      throwParty: req.body.throwParty,
+      spotlight: req.body.spotlight,
+      descriptionOfDreamDay: req.body.descriptionOfDreamDay,
+      avatarPicture: req.body.avatarPicture,
+    };
+
+    const response = await mongodb
+      .getDb()
+      .db()
+      .collection('friends')
+      .replaceOne({ _id: friendId }, friend);
+
+    if (response.modifiedCount > 0) {
+      res.status(204).send();
+    } else {
+      res
+        .status(500)
+        .json(`An error occurred updating a friend: ${response.error}`);
+    }
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};
+
 const deleteFriend = async (req, res) => {
   try {
     if (!ObjectId.isValid(req.params.id)) {
@@ -95,5 +137,6 @@ module.exports = {
   getAllFriends,
   getFriend,
   createFriend,
+  updateFriend,
   deleteFriend,
 };
