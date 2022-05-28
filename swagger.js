@@ -6,8 +6,8 @@ const doc = {
     description:
       "This is an API to store friends birthday's information like birthdate, gift idea, favorite snack, etc",
   },
-  host: 'localhost:8080/friends',
-  schemes: ['http'],
+  host: 'https://upcoming-birthdays.herokuapp.com/friends',
+  schemes: ['https'],
 };
 
 const outputFile = './swagger-output.json';
