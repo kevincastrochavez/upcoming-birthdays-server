@@ -65,6 +65,7 @@ content-type: application/json
 ### PRODUCTION ###
 ############################
 
+###### FRIENDS
 GET https://upcoming-birthdays.herokuapp.com/friends
 ###
 GET https://upcoming-birthdays.herokuapp.com/friends/6287e7be2e19d620aff1fbc7
@@ -100,3 +101,19 @@ content-type: application/json
     }
 ###
 DELETE https://upcoming-birthdays.herokuapp.com/friends/62916a85aba29cb39935f616 HTTP/1.1
+
+
+###### USERS
+GET https://upcoming-birthdays.herokuapp.com/users
+###
+GET https://upcoming-birthdays.herokuapp.com/users/629a992b681cf96610eadf5d
+###
+POST https://upcoming-birthdays.herokuapp.com/users HTTP/1.1 
+content-type: application/json
+
+{
+    "userName": "Citlalli",
+    "password": "12345",
+    "isAdmin": false,
+    "friends": []
+    }
