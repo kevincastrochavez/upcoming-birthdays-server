@@ -37,7 +37,35 @@ const getUser = async (req, res) => {
   }
 };
 
+const createUser = async (req, res) => {
+  try {
+    const user = {
+      userName: req.body.userName,
+      password: req.body.password,
+      isAdmin: req.body.isAdmin,
+      friends: req.body.friends,
+    };
+
+    const response = await mongodb
+      .getDb()
+      .db()
+      .collection('users')
+      .insertOne(user);
+
+    if (response.acknowledged) {
+      res.status(201).json(response);
+    } else {
+      res
+        .status(500)
+        .json(`An error occurred creating a user: ${response.error}`);
+    }
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};
+
 module.exports = {
   getAllUsers,
   getUser,
+  createUser,
 };

@@ -2,9 +2,11 @@
 ### LOCALHOST ###
 ############################
 
+######## FRIENDS
+
 GET http://localhost:8080/friends
 ###
-GET http://localhost:8080/friends/62916a85aba29cb39935f616
+GET http://localhost:8080/friends/6292a5a8244210a7ead9e372
 ###
 POST http://localhost:8080/friends HTTP/1.1 
 content-type: application/json
@@ -14,7 +16,7 @@ content-type: application/json
     "lastName": "Maria",
     "birthdayDate": "January 31",
     "giftIdea": "Ring",
-    "favoriteSnack": "Chips",
+    "favoriteSnack": "Cake",
     "throwParty": true,
     "spotlight": true,
     "descriptionOfDreamDay": "This would be a description of a dream day",
@@ -37,6 +39,25 @@ content-type: application/json
     }
 ###
 DELETE http://localhost:8080/friends/62916acf234c36527cdcb0d5 HTTP/1.1
+
+
+######## USERS
+GET http://localhost:8080/users
+###
+GET http://localhost:8080/users/629a992b681cf96610eadf5d
+###
+POST http://localhost:8080/users HTTP/1.1 
+content-type: application/json
+
+{
+    "userName": "Citlalli",
+    "password": "12345",
+    "isAdmin": false,
+    "friends": []
+    }
+
+
+
 
 
 
