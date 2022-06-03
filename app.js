@@ -5,6 +5,7 @@ const swaggerUi = require('swagger-ui-express');
 
 const swaggerDocument = require('./swagger-output.json');
 const friendsRoutes = require('./routes/friends');
+const usersRoutes = require('./routes/users');
 const mongodb = require('./db/connect');
 
 const port = process.env.PORT || 8080;
@@ -20,7 +21,8 @@ app
     next();
   })
   .use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
-  .use('/friends', friendsRoutes);
+  .use('/friends', friendsRoutes)
+  .use('/users', usersRoutes);
 
 mongodb.initDb((err) => {
   if (err) {
