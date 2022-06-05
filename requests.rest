@@ -57,11 +57,11 @@ content-type: application/json
     }
 
 ###
-PUT http://localhost:8080/users/629a3ec0ce3fb46a6ed5d9aa HTTP/1.1 
+PUT http://localhost:8080/users/629a9919681cf96610eadf5b HTTP/1.1 
 content-type: application/json
 
 {
-    "userName": "kevincastrochavez",
+    "userName": "Kevin",
     "password": "12345",
     "isAdmin": false,
     "friends": []
@@ -129,3 +129,17 @@ content-type: application/json
     "isAdmin": false,
     "friends": []
     }
+
+###
+PUT https://upcoming-birthdays.herokuapp.com/users/6292a5a8244210a7ead9e372 HTTP/1.1 
+content-type: application/json
+
+{
+    "userName": "kevincastrochavez",
+    "password": "12345",
+    "isAdmin": false,
+    "friends": []
+    }
+
+###
+DELETE https://upcoming-birthdays.herokuapp.com/users/6292a5a8244210a7ead9e372 HTTP/1.1
