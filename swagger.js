@@ -6,7 +6,7 @@ const doc = {
     description:
       "This is an API to store friends birthday's information like birthdate, gift idea, favorite snack, etc",
   },
-  host: 'upcoming-birthdays.herokuapp.com/friends',
+  host: 'upcoming-birthdays.herokuapp.com',
   schemes: ['https'],
 };
 
