@@ -67,6 +67,8 @@ content-type: application/json
     "friends": []
     }
 
+###
+DELETE http://localhost:8080/users/629a3ec0ce3fb46a6ed5d9aa HTTP/1.1
 
 
 

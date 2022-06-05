@@ -97,9 +97,36 @@ const updateUser = async (req, res) => {
   }
 };
 
+const deleteUser = async (req, res) => {
+  try {
+    if (!ObjectId.isValid(req.params.id)) {
+      res.status(400).json('Must use a valid user id to delete a user.');
+    }
+
+    const userId = new ObjectId(req.params.id);
+
+    const response = await mongodb
+      .getDb()
+      .db()
+      .collection('users')
+      .remove({ _id: userId }, true);
+
+    if (response.deletedCount > 0) {
+      res.status(204).send();
+    } else {
+      res
+        .status(500)
+        .json(`An error occurred deleting a user: ${response.error}`);
+    }
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};
+
 module.exports = {
   getAllUsers,
   getUser,
   createUser,
   updateUser,
+  deleteUser,
 };
