@@ -131,7 +131,7 @@ content-type: application/json
     }
 
 ###
-PUT https://upcoming-birthdays.herokuapp.com/users/6292a5a8244210a7ead9e372 HTTP/1.1 
+PUT https://upcoming-birthdays.herokuapp.com/users/629a9919681cf96610eadf5b HTTP/1.1 
 content-type: application/json
 
 {
@@ -142,4 +142,4 @@ content-type: application/json
     }
 
 ###
-DELETE https://upcoming-birthdays.herokuapp.com/users/6292a5a8244210a7ead9e372 HTTP/1.1
+DELETE https://upcoming-birthdays.herokuapp.com/users/629a9919681cf96610eadf5b HTTP/1.1
