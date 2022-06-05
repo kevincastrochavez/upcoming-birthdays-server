@@ -36,31 +36,16 @@
             "schema": {
               "type": "object",
               "properties": {
-                "firstName": {
+                "userName": {
                   "example": "any"
                 },
-                "lastName": {
+                "password": {
                   "example": "any"
                 },
-                "birthdayDate": {
+                "isAdmin": {
                   "example": "any"
                 },
-                "giftIdea": {
-                  "example": "any"
-                },
-                "favoriteSnack": {
-                  "example": "any"
-                },
-                "throwParty": {
-                  "example": "any"
-                },
-                "spotlight": {
-                  "example": "any"
-                },
-                "descriptionOfDreamDay": {
-                  "example": "any"
-                },
-                "avatarPicture": {
+                "friends": {
                   "example": "any"
                 }
               }
@@ -101,6 +86,9 @@
           "400": {
             "description": "Bad Request"
           },
+          "412": {
+            "description": "Precondition Failed"
+          },
           "500": {
             "description": "Internal Server Error"
           }
@@ -121,31 +109,16 @@
             "schema": {
               "type": "object",
               "properties": {
-                "firstName": {
+                "userName": {
                   "example": "any"
                 },
-                "lastName": {
+                "password": {
                   "example": "any"
                 },
-                "birthdayDate": {
+                "isAdmin": {
                   "example": "any"
                 },
-                "giftIdea": {
-                  "example": "any"
-                },
-                "favoriteSnack": {
-                  "example": "any"
-                },
-                "throwParty": {
-                  "example": "any"
-                },
-                "spotlight": {
-                  "example": "any"
-                },
-                "descriptionOfDreamDay": {
-                  "example": "any"
-                },
-                "avatarPicture": {
+                "friends": {
                   "example": "any"
                 }
               }
@@ -158,9 +131,6 @@
           },
           "400": {
             "description": "Bad Request"
-          },
-          "412": {
-            "description": "Precondition Failed"
           },
           "500": {
             "description": "Internal Server Error"
