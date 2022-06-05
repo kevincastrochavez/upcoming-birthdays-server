@@ -64,8 +64,42 @@ const createUser = async (req, res) => {
   }
 };
 
+const updateUser = async (req, res) => {
+  try {
+    if (!ObjectId.isValid(req.params.id)) {
+      res.status(400).json('Must use a valid user id to update a user.');
+    }
+
+    const userId = new ObjectId(req.params.id);
+
+    const user = {
+      userName: req.body.userName,
+      password: req.body.password,
+      isAdmin: req.body.isAdmin,
+      friends: req.body.friends,
+    };
+
+    const response = await mongodb
+      .getDb()
+      .db()
+      .collection('users')
+      .replaceOne({ _id: userId }, user);
+
+    if (response.modifiedCount > 0) {
+      res.status(204).send();
+    } else {
+      res
+        .status(500)
+        .json(`An error occurred updating a user: ${response.error}`);
+    }
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};
+
 module.exports = {
   getAllUsers,
   getUser,
   createUser,
+  updateUser,
 };

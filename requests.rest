@@ -44,7 +44,7 @@ DELETE http://localhost:8080/friends/62916acf234c36527cdcb0d5 HTTP/1.1
 ######## USERS
 GET http://localhost:8080/users
 ###
-GET http://localhost:8080/users/629a992b681cf96610eadf5d
+GET http://localhost:8080/users/629a3ec0ce3fb46a6ed5d9aa
 ###
 POST http://localhost:8080/users HTTP/1.1 
 content-type: application/json
@@ -56,6 +56,16 @@ content-type: application/json
     "friends": []
     }
 
+###
+PUT http://localhost:8080/users/629a3ec0ce3fb46a6ed5d9aa HTTP/1.1 
+content-type: application/json
+
+{
+    "userName": "kevincastrochavez",
+    "password": "12345",
+    "isAdmin": false,
+    "friends": []
+    }
 
 
 
