@@ -6,11 +6,11 @@ const doc = {
     description:
       "This is an API to store friends birthday's information like birthdate, gift idea, favorite snack, etc",
   },
-  host: 'upcoming-birthdays.herokuapp.com',
-  schemes: ['https'],
+  host: 'localhost:8080',
+  schemes: ['http'],
 };
 
 const outputFile = './swagger-output.json';
-const endpointsFiles = ['./routes/friends.js', './routes/users.js'];
+const endpointsFiles = ['./app.js'];
 
 swaggerAutogen(outputFile, endpointsFiles, doc);
