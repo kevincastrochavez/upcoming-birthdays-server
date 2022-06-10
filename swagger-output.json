@@ -7,19 +7,8 @@
   },
   "host": ["localhost:3000"],
   "basePath": "/",
-  "schemes": ["http", "https"],
+  "schemes": ["http"],
   "paths": {
-    "/": {
-      "get": {
-        "description": "",
-        "parameters": [],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
     "/friends/": {
       "get": {
         "description": "",
