@@ -6,8 +6,8 @@ const doc = {
     description:
       "This is an API to store friends birthday's information like birthdate, gift idea, favorite snack, etc",
   },
-  host: 'localhost:8080',
-  schemes: ['http'],
+  host: 'localhost:3000',
+  schemes: ['http', 'https'],
 };
 
 const outputFile = './swagger-output.json';

@@ -5,10 +5,21 @@
     "description": "This is an API to store friends birthday's information like birthdate, gift idea, favorite snack, etc",
     "version": "1.0.0"
   },
-  "host": "localhost:8080",
+  "host": ["localhost:3000"],
   "basePath": "/",
-  "schemes": ["http"],
+  "schemes": ["http", "https"],
   "paths": {
+    "/": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/friends/": {
       "get": {
         "description": "",
@@ -33,31 +44,31 @@
               "type": "object",
               "properties": {
                 "firstName": {
-                  "example": "any"
+                  "example": "Kevin"
                 },
                 "lastName": {
-                  "example": "any"
+                  "example": "Castro"
                 },
                 "birthdayDate": {
-                  "example": "any"
+                  "example": "March 23"
                 },
                 "giftIdea": {
-                  "example": "any"
+                  "example": "Month rent"
                 },
                 "favoriteSnack": {
-                  "example": "any"
+                  "example": "Chips"
                 },
                 "throwParty": {
-                  "example": "any"
+                  "example": true
                 },
                 "spotlight": {
-                  "example": "any"
+                  "example": true
                 },
                 "descriptionOfDreamDay": {
-                  "example": "any"
+                  "example": "Having chilaquiles for breakfast, 2 burgers and a pizza for lunch, going to a lake on the afternoon and playing soccer at night"
                 },
                 "avatarPicture": {
-                  "example": "any"
+                  "example": "kevin.jpg"
                 }
               }
             }
@@ -116,31 +127,31 @@
               "type": "object",
               "properties": {
                 "firstName": {
-                  "example": "any"
+                  "example": "Kevin"
                 },
                 "lastName": {
-                  "example": "any"
+                  "example": "Castro"
                 },
                 "birthdayDate": {
-                  "example": "any"
+                  "example": "March 23"
                 },
                 "giftIdea": {
-                  "example": "any"
+                  "example": "Semester rent"
                 },
                 "favoriteSnack": {
-                  "example": "any"
+                  "example": "Chips"
                 },
                 "throwParty": {
-                  "example": "any"
+                  "example": true
                 },
                 "spotlight": {
-                  "example": "any"
+                  "example": true
                 },
                 "descriptionOfDreamDay": {
-                  "example": "any"
+                  "example": "Having chilaquiles for breakfast, 2 burgers and a pizza for lunch, going to a lake on the afternoon and playing soccer at night"
                 },
                 "avatarPicture": {
-                  "example": "any"
+                  "example": "kevin.jpg"
                 }
               }
             }
@@ -208,16 +219,16 @@
               "type": "object",
               "properties": {
                 "userName": {
-                  "example": "any"
+                  "example": "kevin@kevin.com"
                 },
                 "password": {
-                  "example": "any"
+                  "example": "supersecretpassword"
                 },
                 "isAdmin": {
-                  "example": "any"
+                  "example": true
                 },
                 "friends": {
-                  "example": "any"
+                  "example": [1, 2, 3]
                 }
               }
             }
@@ -279,16 +290,16 @@
               "type": "object",
               "properties": {
                 "userName": {
-                  "example": "any"
+                  "example": "kevin@kevin.com"
                 },
                 "password": {
-                  "example": "any"
+                  "example": "supersecretpassword"
                 },
                 "isAdmin": {
-                  "example": "any"
+                  "example": true
                 },
                 "friends": {
-                  "example": "any"
+                  "example": [1, 2, 3]
                 }
               }
             }
