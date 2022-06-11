@@ -34,9 +34,9 @@ app
   })
   .use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
-app.use('/', (req, res) => {
-  res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
-});
+// app.use('/', (req, res) => {
+//   res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
+// });
 
 app.use('/friends', requiresAuth(), friendsRoutes);
 app.use('/users', requiresAuth(), usersRoutes);
