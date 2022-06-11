@@ -11,7 +11,7 @@
   "paths": {
     "/friends/": {
       "get": {
-        "description": "",
+        "description": "Gets all friends from the API",
         "produces": ["application/json"],
         "parameters": [],
         "responses": {
@@ -24,7 +24,7 @@
         }
       },
       "post": {
-        "description": "",
+        "description": "Creates a new friend in the API",
         "parameters": [
           {
             "name": "body",
@@ -78,7 +78,7 @@
     },
     "/friends/{id}": {
       "get": {
-        "description": "",
+        "description": "Gets a specific friend by Id from the API",
         "produces": ["application/json"],
         "parameters": [
           {
@@ -101,7 +101,7 @@
         }
       },
       "put": {
-        "description": "",
+        "description": "Updates a specific friend by Id from the API",
         "parameters": [
           {
             "name": "id",
@@ -162,7 +162,7 @@
         }
       },
       "delete": {
-        "description": "",
+        "description": "Deletes a specific friend by Id from the API",
         "parameters": [
           {
             "name": "id",
@@ -186,7 +186,7 @@
     },
     "/users/": {
       "get": {
-        "description": "",
+        "description": "Gets all the users from the API",
         "produces": ["application/json"],
         "parameters": [],
         "responses": {
@@ -199,7 +199,7 @@
         }
       },
       "post": {
-        "description": "",
+        "description": "Creates a new user in the API",
         "parameters": [
           {
             "name": "body",
@@ -238,7 +238,7 @@
     },
     "/users/{id}": {
       "get": {
-        "description": "",
+        "description": "Gets a specific user from the API",
         "produces": ["application/json"],
         "parameters": [
           {
@@ -264,7 +264,7 @@
         }
       },
       "put": {
-        "description": "",
+        "description": "Updates a specific user by Id from the API",
         "parameters": [
           {
             "name": "id",
@@ -307,7 +307,7 @@
         }
       },
       "delete": {
-        "description": "",
+        "description": "Deletes a specific user from the API",
         "parameters": [
           {
             "name": "id",
