@@ -35,17 +35,7 @@ app
   .use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.use('/', (req, res) => {
-  res.write(
-    '<div style=" width: 50vw; height: 100vh; display: flex; margin: 0 auto; justify-content: space-between; align-items: center;" >'
-  );
-  res.write(
-    '<a href="https://upcoming-birthdays.herokuapp.com/friends" style="text-decoration: none; font-size: 70px; color: #0588bc" >Friends</a >'
-  );
-  res.write(
-    '<a href="https://upcoming-birthdays.herokuapp.com/users" style="text-decoration: none; font-size: 70px; color: #0588bc" >Users</a >'
-  );
-  res.write('</div>');
-  res.send();
+  res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
 });
 
 app.use('/friends', requiresAuth(), friendsRoutes);
