@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const path = require('path');
 const bodyParser = require('body-parser');
 const swaggerUi = require('swagger-ui-express');
 const { auth } = require('express-openid-connect');
@@ -33,6 +34,10 @@ app
     next();
   })
   .use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+
+app.use('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '/index.html'));
+});
 
 app.use('/friends', requiresAuth(), friendsRoutes);
 app.use('/users', requiresAuth(), usersRoutes);
